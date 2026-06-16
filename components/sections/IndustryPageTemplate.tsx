@@ -4,7 +4,7 @@ import { RelatedProducts } from "./RelatedProducts";
 import { FinalCTA } from "./FinalCTA";
 import type { Industry } from "@/lib/content/industries";
 import { getStartedCta } from "@/lib/content/navigation";
-import { CheckCircle2, TrendingUp } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 
 type IndustryPageTemplateProps = {
   industry: Industry;
@@ -15,7 +15,8 @@ export function IndustryPageTemplate({ industry }: IndustryPageTemplateProps) {
     <>
       <HeroSection
         badge={industry.name}
-        title={industry.title}
+        title={industry.name}
+        pills={[...industry.pills]}
         description={industry.description}
         ctas={[
           { label: getStartedCta.label, href: getStartedCta.href, variant: "default" },
@@ -23,37 +24,32 @@ export function IndustryPageTemplate({ industry }: IndustryPageTemplateProps) {
         compact
       />
 
-      <SectionWrapper>
-        <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-8">
-          Use Cases
-        </h2>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {industry.useCases.map((useCase) => (
-            <div
-              key={useCase}
-              className="glass-card flex items-center gap-3 rounded-xl p-5"
-            >
-              <CheckCircle2 className="h-5 w-5 shrink-0 text-accent" />
-              <span className="text-sm font-medium">{useCase}</span>
-            </div>
-          ))}
-        </div>
-      </SectionWrapper>
+      <SectionWrapper className="py-0">
+        <div className="relative border-y border-surface-border py-14 md:py-20">
+          <div className="pointer-events-none absolute inset-0 grid-bg opacity-[0.15]" />
 
-      <SectionWrapper className="bg-foreground/[0.02]">
-        <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-8">
-          Business Benefits
-        </h2>
-        <div className="grid gap-6 sm:grid-cols-3">
-          {industry.benefits.map((benefit) => (
-            <div
-              key={benefit}
-              className="glass-card rounded-xl p-6 text-center"
-            >
-              <TrendingUp className="h-8 w-8 text-accent mx-auto mb-3" />
-              <p className="text-muted">{benefit}</p>
+          <div className="relative">
+            <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
+              Pipeline
+            </h2>
+
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              {industry.details.map((detail) => (
+                <div
+                  key={detail.title}
+                  className="flex items-start gap-4 rounded-xl border border-surface-border bg-foreground/[0.02] p-5"
+                >
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-foreground/70" />
+                  <div>
+                    <h3 className="text-sm font-semibold">{detail.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted">
+                      {detail.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </SectionWrapper>
 

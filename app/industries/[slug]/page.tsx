@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!industry) return { title: "Industry Not Found" };
 
   return {
-    title: industry.title,
+    title: industry.name,
     description: industry.description,
   };
 }

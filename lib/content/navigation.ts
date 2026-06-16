@@ -31,25 +31,29 @@ export const industries = [
   {
     slug: "fashion",
     name: "Fashion",
-    description: "Quality inspection & retail analytics",
+    description:
+      "Physically accurate synthetic data for fashion inspection and handling workflows.",
     href: "/industries/fashion",
   },
   {
     slug: "food",
     name: "Food",
-    description: "Food processing & retail solutions",
+    description:
+      "Package and container scenes for food inspection and robotic handling datasets.",
     href: "/industries/food",
   },
   {
     slug: "electronics",
     name: "Electronics",
-    description: "Production line inspection",
+    description:
+      "CAD-to-data synthetic scenes for electronics inspection and defect coverage.",
     href: "/industries/electronics",
   },
   {
     slug: "machine-tending",
-    name: "Machine Tending",
-    description: "Industrial automation & robotics",
+    name: "Machine tending",
+    description:
+      "Simulation-ready machine tending scenes for robotics training data.",
     href: "/industries/machine-tending",
   },
 ] as const;

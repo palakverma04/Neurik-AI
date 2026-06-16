@@ -19,6 +19,7 @@ type HeroSectionProps = {
   extendedDescription?: string;
   backgroundVideo?: string;
   ctas?: CTA[];
+  pills?: string[];
   compact?: boolean;
   centered?: boolean;
 };
@@ -32,6 +33,7 @@ export function HeroSection({
   extendedDescription,
   backgroundVideo,
   ctas,
+  pills,
   compact = false,
   centered = false,
 }: HeroSectionProps) {
@@ -91,6 +93,17 @@ export function HeroSection({
             <p className="mt-3 text-lg md:text-xl text-muted font-medium">
               {secondarySubtitle}
             </p>
+          )}
+          {pills && pills.length > 0 && (
+            <div
+              className={`mt-6 flex flex-wrap gap-2 ${centered ? "justify-center" : ""}`}
+            >
+              {pills.map((pill) => (
+                <Badge key={pill} variant="secondary">
+                  {pill}
+                </Badge>
+              ))}
+            </div>
           )}
           {description && (
             <p
