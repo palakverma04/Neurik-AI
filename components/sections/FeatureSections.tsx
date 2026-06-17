@@ -9,11 +9,8 @@ type FeatureSectionsProps = {
 export function FeatureSections({ features }: FeatureSectionsProps) {
   return (
     <>
-      {features.map((feature, i) => (
-        <SectionWrapper
-          key={feature.title}
-          className={i % 2 === 0 ? "bg-foreground/[0.02]" : ""}
-        >
+      {features.map((feature) => (
+        <SectionWrapper key={feature.title}>
           <div className="max-w-3xl">
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
               {feature.title}

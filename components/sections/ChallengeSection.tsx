@@ -27,7 +27,7 @@ export function ChallengeSection({
   conclusion,
 }: ChallengeSectionProps) {
   return (
-    <SectionWrapper className="bg-foreground/[0.02]">
+    <SectionWrapper>
       <div className="max-w-3xl">
         <Badge variant="secondary">{badge}</Badge>
         <h2 className="mt-4 text-3xl md:text-4xl font-semibold">

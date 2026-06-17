@@ -8,7 +8,7 @@ type CapabilitiesGridProps = {
 
 export function CapabilitiesGrid({ title, items }: CapabilitiesGridProps) {
   return (
-    <SectionWrapper className="bg-foreground/[0.02] py-16">
+    <SectionWrapper className="py-16">
       <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-8">
         {title}
       </h2>

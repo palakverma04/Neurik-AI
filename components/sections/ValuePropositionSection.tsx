@@ -11,11 +11,8 @@ export function ValuePropositionSection({
   const metric = valueProposition.metric ?? "F1 score";
 
   return (
-    <SectionWrapper className="py-0">
-      <div className="relative border-y border-surface-border py-14 md:py-20">
-        <div className="pointer-events-none absolute inset-0 grid-bg opacity-[0.18]" />
-
-        <div className="relative max-w-3xl">
+    <SectionWrapper tone="default" className="py-14 md:py-20">
+      <div className="max-w-3xl">
           <h2 className="text-2xl leading-snug tracking-tight md:text-3xl">
             {valueProposition.description}
           </h2>
@@ -46,7 +43,6 @@ export function ValuePropositionSection({
           </div>
 
           <p className="mt-10 text-sm text-muted">{valueProposition.proof}</p>
-        </div>
       </div>
     </SectionWrapper>
   );

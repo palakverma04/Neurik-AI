@@ -24,10 +24,7 @@ export function IndustryPageTemplate({ industry }: IndustryPageTemplateProps) {
         compact
       />
 
-      <SectionWrapper className="py-0">
-        <div className="relative border-y border-surface-border py-14 md:py-20">
-          <div className="pointer-events-none absolute inset-0 grid-bg opacity-[0.15]" />
-
+      <SectionWrapper tone="alt" className="py-14 md:py-20">
           <div className="relative">
             <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
               Pipeline
@@ -37,7 +34,7 @@ export function IndustryPageTemplate({ industry }: IndustryPageTemplateProps) {
               {industry.details.map((detail) => (
                 <div
                   key={detail.title}
-                  className="flex items-start gap-4 rounded-xl border border-surface-border bg-foreground/[0.02] p-5"
+                  className="flex items-start gap-4 rounded-xl border border-surface-border bg-background/40 p-5"
                 >
                   <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-foreground/70" />
                   <div>
@@ -50,7 +47,6 @@ export function IndustryPageTemplate({ industry }: IndustryPageTemplateProps) {
               ))}
             </div>
           </div>
-        </div>
       </SectionWrapper>
 
       <RelatedProducts slugs={industry.relatedProducts} />

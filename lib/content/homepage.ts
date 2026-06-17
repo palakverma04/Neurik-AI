@@ -53,12 +53,8 @@ export const homepageContent = {
           "Generate thousands of training scenarios from minimal real-world telemetry.",
         href: "/products/forge",
         tryHref: FORGE_URL,
+        layer: "Synthetic data",
         bento: "featured",
-        media: {
-          type: "video",
-          src: "/platform/forge.mp4",
-          alt: "Physics simulation preview",
-        },
       },
       {
         name: "Sentinel",
@@ -66,24 +62,16 @@ export const homepageContent = {
         description:
           "Develop, retrain, and optimize perception and action models for industrial environments.",
         href: "/products/sentinel",
+        layer: "Model training",
         bento: "standard",
-        media: {
-          type: "image",
-          src: "/platform/sentinel.png",
-          alt: "Annotated 3D asset preview",
-        },
       },
       {
         name: "Runtime",
         tagline: "Heterogeneous Edge Orchestration",
         description: "Deploy seamlessly across CPUs, GPUs, and NPUs.",
         href: "/products/runtime",
+        layer: "Edge deployment",
         bento: "standard",
-        media: {
-          type: "video",
-          src: "/platform/runtime.mp4",
-          alt: "Edge runtime preview",
-        },
       },
       {
         name: "Dual-View Intelligence",
@@ -91,12 +79,8 @@ export const homepageContent = {
         description:
           "Global monitoring synchronized with local robot execution — two intelligence layers, one coordinated stack.",
         href: "/products/dual-view-intelligence",
+        layer: "Supervisory control",
         bento: "wide",
-        media: {
-          type: "image",
-          src: "/platform/dual-view.png",
-          alt: "Simulation environment overview",
-        },
       },
     ],
   },

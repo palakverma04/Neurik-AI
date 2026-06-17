@@ -106,7 +106,7 @@ export function ApproachSection({
   const [active, setActive] = useState(0);
 
   return (
-    <SectionWrapper className="bg-foreground/[0.02]">
+    <SectionWrapper tone="light">
       <div className="mx-auto max-w-3xl text-center">
         <Badge>{badge}</Badge>
         <h2 className="mt-4 text-3xl font-semibold md:text-4xl">{title}</h2>
@@ -175,10 +175,10 @@ export function ApproachSection({
                       </div>
 
                       <div className="relative mt-auto p-5 md:p-6">
-                        <h3 className="font-display text-2xl text-foreground md:text-3xl">
+                        <h3 className="font-display text-2xl text-[#fff6f6] md:text-3xl">
                           {step.title}
                         </h3>
-                        <p className="mt-2 max-w-lg text-sm leading-relaxed text-muted md:text-base">
+                        <p className="mt-2 max-w-lg text-sm leading-relaxed text-[#fff6f6]/75 md:text-base">
                           {step.description}
                         </p>
                         <span

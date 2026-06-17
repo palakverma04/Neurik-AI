@@ -31,6 +31,7 @@ export default function HomePage() {
         title={finalCta.title}
         description={finalCta.description}
         ctas={finalCta.ctas}
+        tone="light"
       />
     </>
   );

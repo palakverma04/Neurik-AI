@@ -8,7 +8,7 @@ type WorkflowStepsProps = {
 
 export function WorkflowSteps({ title, steps }: WorkflowStepsProps) {
   return (
-    <SectionWrapper className="bg-foreground/[0.02] py-16">
+    <SectionWrapper className="py-16">
       <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-10 text-center">
         {title}
       </h2>

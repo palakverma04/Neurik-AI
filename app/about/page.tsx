@@ -24,7 +24,7 @@ export default function AboutPage() {
         compact
       />
 
-      <SectionWrapper>
+      <SectionWrapper tone="alt">
         <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
           {mission.title}
         </h2>
@@ -33,7 +33,7 @@ export default function AboutPage() {
         </p>
       </SectionWrapper>
 
-      <SectionWrapper className="bg-foreground/[0.02]">
+      <SectionWrapper>
         <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
           {whatWeBuild.title}
         </h2>
@@ -58,7 +58,7 @@ export default function AboutPage() {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper className="bg-foreground/[0.02]">
+      <SectionWrapper>
         <div className="text-center max-w-2xl mx-auto">
           <Users className="h-12 w-12 text-accent mx-auto mb-4" />
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
