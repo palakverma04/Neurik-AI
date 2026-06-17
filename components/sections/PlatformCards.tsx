@@ -13,14 +13,11 @@ import {
 } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
-type BentoSize = "featured" | "standard" | "wide";
-
 type Component = {
   name: string;
   tagline: string;
   description: string;
   href: string;
-  bento: BentoSize;
 };
 
 type PlatformCardsProps = {
@@ -30,12 +27,6 @@ type PlatformCardsProps = {
   components: readonly Component[];
 };
 
-const bentoClasses: Record<BentoSize, string> = {
-  featured: "md:col-span-2",
-  standard: "md:col-span-1",
-  wide: "md:col-span-4",
-};
-
 function PlatformBentoCard({
   component,
   index,
@@ -43,9 +34,6 @@ function PlatformBentoCard({
   component: Component;
   index: number;
 }) {
-  const isFeatured = component.bento === "featured";
-  const isWide = component.bento === "wide";
-
   return (
     <motion.div
       variants={staggerItem}
@@ -57,14 +45,13 @@ function PlatformBentoCard({
         href={component.href}
         className={cn(
           "group relative flex h-full flex-col overflow-hidden rounded-xl border border-surface-border bg-foreground/[0.03] p-5 transition-[border-color,background-color,box-shadow] duration-300 hover:border-foreground/25 hover:bg-foreground/[0.05] hover:shadow-[0_12px_40px_rgb(0_0_0/0.35)] md:p-6",
-          bentoClasses[component.bento],
         )}
       >
         <div className="flex items-start justify-between gap-3">
           <h3
             className={cn(
               "font-display tracking-tight transition-transform duration-300 group-hover:translate-x-0.5",
-              isFeatured ? "text-xl md:text-2xl" : "text-lg",
+              "text-xl md:text-2xl",
             )}
           >
             {component.name}
@@ -75,8 +62,7 @@ function PlatformBentoCard({
         <p
           className={cn(
             "mt-3 font-medium leading-snug text-foreground/85",
-            isFeatured ? "text-sm md:text-base" : "text-sm",
-            isWide && "md:max-w-3xl",
+            "text-sm md:text-base",
           )}
         >
           {component.tagline}
@@ -95,15 +81,6 @@ export function PlatformCards({
   description,
   components,
 }: PlatformCardsProps) {
-  const featured = components.find((c) => c.bento === "featured");
-  const standard = components.filter((c) => c.bento === "standard");
-  const wide = components.find((c) => c.bento === "wide");
-  const ordered = [
-    ...(featured ? [featured] : []),
-    ...standard,
-    ...(wide ? [wide] : []),
-  ];
-
   return (
     <SectionWrapper tone="default" className="py-16 md:py-24" animate={false}>
       <Reveal className="mx-auto mb-8 max-w-3xl text-center md:mb-10">
@@ -119,13 +96,13 @@ export function PlatformCards({
       </Reveal>
 
       <motion.div
-        className="grid grid-cols-1 gap-3 md:grid-cols-4 md:gap-3"
+        className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-3"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
         viewport={viewport}
       >
-        {ordered.map((component, index) => (
+        {components.map((component, index) => (
           <PlatformBentoCard
             key={component.name}
             component={component}

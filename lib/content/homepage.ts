@@ -59,7 +59,6 @@ export const homepageContent = {
         description:
           "Generate thousands of training scenarios from minimal real-world telemetry.",
         href: "/products/forge",
-        bento: "featured",
       },
       {
         name: "Sentinel",
@@ -67,14 +66,12 @@ export const homepageContent = {
         description:
           "Develop, retrain, and optimize perception and action models for industrial environments.",
         href: "/products/sentinel",
-        bento: "standard",
       },
       {
         name: "Runtime",
         tagline: "Heterogeneous Edge Orchestration",
         description: "Deploy seamlessly across CPUs, GPUs, and NPUs.",
         href: "/products/runtime",
-        bento: "standard",
       },
     ],
   },
