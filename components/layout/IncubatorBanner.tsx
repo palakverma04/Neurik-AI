@@ -1,25 +1,29 @@
 export function IncubatorBanner() {
   return (
     <section
-      className="border-t border-surface-border bg-foreground/[0.02] h-[105px] flex items-center justify-center"
+      className="border-t border-surface-border bg-brand-elevated py-10 md:py-12"
       aria-label="Incubator affiliation"
     >
-      <div className="flex items-center justify-center gap-x-2 text-base md:text-lg text-muted leading-none whitespace-nowrap">
-        <span className="translate-y-px">Part of the</span>
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-4 px-6 text-center sm:flex-row sm:gap-5 lg:px-8">
+        <p className="text-lg font-medium leading-none text-foreground md:text-xl">
+          Part of the
+        </p>
         <a
           href="https://evonexus.org"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex shrink-0 items-center opacity-80 hover:opacity-100 transition-opacity"
+          className="inline-flex shrink-0 items-center transition-opacity hover:opacity-90"
           aria-label="EvoNexus incubator"
         >
           <img
             src="/evonexus-logo.svg"
-            alt=""
-            className="block h-[1.05em] md:h-[1.1em] w-auto"
+            alt="EvoNexus"
+            className="block h-8 w-auto md:h-10"
           />
         </a>
-        <span className="translate-y-px">incubator.</span>
+        <p className="text-lg font-medium leading-none text-foreground md:text-xl">
+          incubator.
+        </p>
       </div>
     </section>
   );

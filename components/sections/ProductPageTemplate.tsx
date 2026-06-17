@@ -81,7 +81,11 @@ export function ProductPageTemplate({ product }: ProductPageTemplateProps) {
       )}
 
       {product.workflow && product.workflow.length > 0 && (
-        <WorkflowSteps title="Workflow" steps={product.workflow} />
+        <WorkflowSteps
+          title={product.workflowTitle ?? "Workflow"}
+          description={product.workflowDescription}
+          steps={product.workflow}
+        />
       )}
 
       {product.supportedEnvironments && (

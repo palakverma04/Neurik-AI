@@ -1,5 +1,6 @@
 import { HeroSection } from "./HeroSection";
 import { SectionWrapper } from "./SectionWrapper";
+import { IndustryShowcase } from "./IndustryShowcase";
 import { RelatedProducts } from "./RelatedProducts";
 import { FinalCTA } from "./FinalCTA";
 import type { Industry } from "@/lib/content/industries";
@@ -23,6 +24,8 @@ export function IndustryPageTemplate({ industry }: IndustryPageTemplateProps) {
         ]}
         compact
       />
+
+      {industry.showcase && <IndustryShowcase showcase={industry.showcase} />}
 
       <SectionWrapper tone="alt" className="py-14 md:py-20">
           <div className="relative">

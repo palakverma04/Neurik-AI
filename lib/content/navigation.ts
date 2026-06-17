@@ -33,7 +33,7 @@ export const industries = [
     slug: "food",
     name: "Food",
     description:
-      "Package and container scenes for food inspection and robotic handling datasets.",
+      "Individually wrapped packages in ventilated crates with RGB and depth outputs.",
     href: "/industries/food",
   },
   {
@@ -47,7 +47,7 @@ export const industries = [
     slug: "machine-tending",
     name: "Machine tending",
     description:
-      "Simulation-ready machine tending scenes for robotics training data.",
+      "Bin picking scenes with random part orientations and multi-modal training outputs.",
     href: "/industries/machine-tending",
   },
 ] as const;

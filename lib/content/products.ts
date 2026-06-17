@@ -2,8 +2,11 @@ export type ProductFeature = {
   title: string;
   description: string;
   capabilities?: string[];
+  applications?: string[];
   benefits?: string[];
+  impact?: string;
   capabilitiesLabel?: string;
+  applicationsLabel?: string;
   benefitsLabel?: string;
 };
 
@@ -20,6 +23,8 @@ export type Product = {
   features?: ProductFeature[];
   supportedPlatforms?: string[];
   workflow?: string[];
+  workflowTitle?: string;
+  workflowDescription?: string;
   supportedEnvironments?: string[];
   views?: {
     title: string;
@@ -96,7 +101,9 @@ export const products: Record<string, Product> = {
       "/platform/val-seg-loss-progress.mp4",
     ],
     description:
-      "Sentinel develops and retrains specialized models optimized for real-world industrial environments.",
+      "Develops and continuously retrains perception and action models for real-world industrial environments.",
+    extendedDescription:
+      "Built for resource-constrained edge hardware — segmentation, predictive world modeling, and autonomous action in one framework.",
     valueProposition: {
       description: "Increasing the F1 score of baseline models",
       from: "18%",
@@ -106,46 +113,78 @@ export const products: Record<string, Product> = {
     },
     features: [
       {
-        title: "Kinetic Action Models",
-        description:
-          "Low-latency action systems designed for autonomous operation.",
-        capabilities: [
-          "Motion Planning",
-          "Manipulation Intelligence",
-          "Vision-Language-Action Models",
-          "Autonomous Decision Making",
-          "Spatial Reasoning",
-        ],
-      },
-      {
         title: "Advanced Segmentation Models",
         description:
-          "Designed for resource-constrained hardware while maintaining high-fidelity spatial awareness.",
+          "High-fidelity spatial understanding at real-time speed on edge hardware — built for industrial environments.",
         capabilities: [
-          "Environmental Classification",
+          "Environmental Understanding",
+          "Pixel-Level Classification",
+          "Obstacle Detection",
           "Spatial Mapping",
-          "Obstacle Identification",
-          "Path Segmentation",
-          "Scene Understanding",
+          "Path Identification",
+          "Volumetric Scene Understanding",
+        ],
+        applications: [
+          "Quality Inspection",
+          "Surface Defect Detection",
+          "Warehouse Monitoring",
+          "Industrial Automation",
         ],
       },
       {
-        title: "Predictive World Models",
+        title: "Kinetic Action Models",
         description:
-          "Sentinel incorporates predictive architectures that help systems understand how environments evolve over time. This enables more reliable planning and decision making in dynamic physical environments.",
+          "Low-latency control systems that ingest visual, spatial, and telemetry data — turning perception into action in dynamic environments.",
+        capabilities: [
+          "Motion Planning",
+          "Robot Manipulation",
+          "Spatial Reasoning",
+          "Autonomous Navigation",
+          "Real-Time Decision Making",
+        ],
       },
       {
-        title: "Quantization-Aware Fine-Tuning",
-        description: "Optimize models directly for deployment hardware.",
+        title: "JEPA-Powered World Models",
+        description:
+          "Joint Embedding Predictive Architectures (JEPA) build predictive representations of environments — anticipating future states instead of reacting only to the current frame.",
+        capabilities: [
+          "Predictive World Modeling",
+          "Environment Forecasting",
+          "Context-Aware Decision Making",
+          "Long-Horizon Planning",
+          "Physical State Understanding",
+        ],
+        impact:
+          "Reason about what happens next — not just what is visible now.",
+      },
+      {
+        title: "Vision-Language-Action Models (VLA)",
+        description:
+          "Connect perception, language, and execution — robots interpret instructions, understand surroundings, and act autonomously.",
+        capabilities: [
+          "Instruction-Based Robotics",
+          "Task Planning",
+          "Multi-Modal Understanding",
+          "Adaptive Action Generation",
+          "Autonomous Execution",
+        ],
+        impact:
+          "Bridge general intelligence and real-world physical action.",
+      },
+      {
+        title: "Quantization-Aware Fine-Tuning (QAFT)",
+        description:
+          "Inject quantization behavior into training so models ship ready for deployment hardware.",
         benefits: [
-          "Reduced Memory Footprint",
-          "Lower Latency",
-          "Hardware-Aware Optimization",
+          "Up to 75% Memory Reduction",
           "Edge Deployment Readiness",
+          "Reduced Latency",
+          "Hardware-Aware Optimization",
+          "Accuracy Preservation Across INT8 and INT4 Deployments",
         ],
       },
     ],
-    relatedProducts: ["forge", "runtime"],
+    relatedProducts: ["forge", "runtime", "dual-view-intelligence"],
   },
   runtime: {
     slug: "runtime",

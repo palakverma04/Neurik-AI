@@ -3,11 +3,24 @@ export type IndustryDetail = {
   description: string;
 };
 
+export type IndustryShowcaseImage = {
+  src: string;
+  alt: string;
+  label: string;
+};
+
+export type IndustryShowcase = {
+  title: string;
+  description: string;
+  images: IndustryShowcaseImage[];
+};
+
 export type Industry = {
   slug: string;
   name: string;
   description: string;
   pills: string[];
+  showcase?: IndustryShowcase;
   details: IndustryDetail[];
   relatedProducts: string[];
 };
@@ -82,66 +95,120 @@ export const industries: Record<string, Industry> = {
     slug: "food",
     name: "Food",
     description:
-      "Generate package and container scenes with control over orientation, labels, lighting, number of assets, and layout. The pipeline supports physically accurate food inspection and robotic handling datasets.",
+      "Generate top-down crate scenes of individually wrapped retail food packages — biscuit sachets and chip bags in mixed orientations, with aligned RGB and depth exports for inspection and bin-picking models.",
     pills: [
-      "Package orientation",
-      "Labels",
-      "Asset count",
-      "Containers",
+      "Mixed orientations",
+      "SKU variation",
+      "Ventilated crates",
+      "RGB + depth",
     ],
+    showcase: {
+      title: "Retail packaging in ventilated crates",
+      description:
+        "Simulate the way packaged goods actually arrive in logistics — piled in perforated plastic crates with labels facing up, sideways, or flipped to show barcodes and nutrition panels. Switch SKUs within the same crate geometry, then export matching RGB and depth from one scene.",
+      images: [
+        {
+          src: "/platform/food1.png",
+          alt: "Top-down view of blue PAR-VIDA Marie biscuit sachets piled in a light blue ventilated plastic crate, with some packages showing front labels and others flipped to reveal barcode panels",
+          label: "RGB · biscuit sachets, mixed orientations",
+        },
+        {
+          src: "/platform/food2.png",
+          alt: "Grayscale depth map of individually wrapped pillow-pack items in a perforated crate, showing package silhouettes and pile structure on a white background",
+          label: "Depth map · pillow-pack geometry",
+        },
+        {
+          src: "/platform/food3.png",
+          alt: "Top-down view of orange Toprika chip bags in a light blue ventilated crate, with Cyrillic branding and a mix of front artwork and white back panels",
+          label: "RGB · chip bags, SKU variation",
+        },
+        {
+          src: "/platform/food4.png",
+          alt: "Grayscale depth map of flexible snack pouches stacked in a ventilated crate, with darker values on top surfaces and lighter values on lower layers",
+          label: "Depth map · occlusion & pick points",
+        },
+      ],
+    },
     details: [
       {
-        title: "Orientation control",
+        title: "Mixed orientations",
         description:
-          "Control whether packages face up, down, sideways, or are partially occluded inside containers.",
+          "Place packages face-up with brand artwork visible, sideways, or flipped to expose barcode and nutrition panels — the same overlap patterns vision systems see at pick stations.",
       },
       {
-        title: "Label variation",
+        title: "SKU and label variation",
         description:
-          "Generate different product labels and package appearances for model robustness.",
+          "Swap product lines within one crate setup — from blue PAR-VIDA biscuit sachets to orange Toprika chip bags — without rebuilding the container, floor, or camera rig.",
       },
       {
-        title: "Scene density",
+        title: "Crate fill and density",
         description:
-          "Control the number of assets, layout, spacing, occlusions, and container placement.",
+          "Control how many units sit in the ventilated crate and how they stack, from loose partial fills to tightly overlapping piles.",
       },
       {
-        title: "Outputs",
+        title: "Aligned depth exports",
         description:
-          "Produce RGB, depth, segmentation, bounding boxes, and COCO-format annotations.",
+          "Generate depth maps from the same scene to train pick-point estimation, height reasoning, and occlusion handling on flexible pillow-pack geometry.",
       },
     ],
-    relatedProducts: ["sentinel", "runtime"],
+    relatedProducts: ["forge", "sentinel", "runtime"],
   },
   "machine-tending": {
     slug: "machine-tending",
     name: "Machine tending",
     description:
-      "Create simulation-ready machine tending scenes with controlled asset orientations, physically accurate properties, lighting, and camera perspectives for robotics training data.",
-    pills: ["Orientations", "Isaac Sim", "Robot data", "VLA training"],
+      "Generate simulation-ready bin picking scenes for machine tending — identical parts in random orientations, physically accurate materials, and multi-modal training outputs for pick-and-place robots.",
+    pills: ["Bin picking", "Part orientations", "Isaac Sim", "Multi-modal labels"],
+    showcase: {
+      title: "From bin scene to training data",
+      description:
+        "Control part geometry, bin density, lighting, and camera setup in Isaac Sim — then export aligned RGB, normal, and depth modalities from the same scene for VLA and manipulation model training.",
+      images: [
+        {
+          src: "/platform/machine_tending1.png",
+          alt: "Top-down RGB render of a bin densely packed with cross-shaped industrial fittings in random orientations",
+          label: "RGB · dense bin layout",
+        },
+        {
+          src: "/platform/machine_tending2.png",
+          alt: "Top-down RGB render of a bin with fewer parts and varied lighting for machine tending training",
+          label: "RGB · sparse layout & lighting",
+        },
+        {
+          src: "/platform/machine_tending3.png",
+          alt: "Normal map visualization of industrial fittings in a machine tending bin",
+          label: "Normal map · surface geometry",
+        },
+        {
+          src: "/platform/machine_tending4.png",
+          alt: "Depth map of industrial fittings arranged in a machine tending feed bin",
+          label: "Depth map · pick-point geometry",
+        },
+      ],
+    },
     details: [
       {
-        title: "Assets and poses",
+        title: "Random bin poses",
         description:
-          "Control asset orientation, placement, and scene setup for machine tending workflows.",
+          "Generate densely packed or sparse arrangements of identical parts with arbitrary orientations — the core feed-bin scenario for machine tending pick-and-place.",
       },
       {
-        title: "Physical properties",
+        title: "Controlled variation",
         description:
-          "Generate physically accurate 3D assets with relevant properties for simulation and manipulation tasks.",
+          "Vary part count, lighting direction, container geometry, and camera height while keeping physics-grounded assets and scene parameters consistent.",
       },
       {
-        title: "Lighting and cameras",
+        title: "Geometry-aware renders",
         description:
-          "Specify warehouse lighting, reflections, camera intrinsics, and extrinsics.",
+          "Export normal maps and depth from the same scene so perception models learn true part geometry, not just appearance under one lighting setup.",
       },
       {
-        title: "Training data",
+        title: "Training-ready labels",
         description:
-          "Export annotated images and simulation data that can be used for VLAs and robots.",
+          "Produce RGB, depth, segmentation, bounding boxes, and COCO-format annotations ready for VLA training and robot deployment.",
       },
     ],
-    relatedProducts: ["sentinel", "runtime"],
+    relatedProducts: ["forge", "sentinel", "runtime"],
   },
 };
 
