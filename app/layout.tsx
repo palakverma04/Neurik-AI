@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Michroma, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import { Header } from "@/components/layout/Header";
+import { ScrollProgress } from "@/components/layout/ScrollProgress";
 import { IncubatorBanner } from "@/components/layout/IncubatorBanner";
 import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
@@ -53,6 +54,7 @@ export default function RootLayout({
       className={`${display.variable} ${body.variable} ${mono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
+        <ScrollProgress />
         <Header />
         <main className="flex-1">{children}</main>
         <IncubatorBanner />

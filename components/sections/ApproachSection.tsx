@@ -3,9 +3,11 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
+import { Reveal } from "@/components/motion/Reveal";
 import { SectionWrapper } from "./SectionWrapper";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { staggerContainer, staggerItem } from "@/lib/motion";
 
 type Step = {
   title: string;
@@ -107,15 +109,31 @@ export function ApproachSection({
 
   return (
     <SectionWrapper tone="light">
-      <div className="mx-auto max-w-3xl text-center">
-        <Badge>{badge}</Badge>
-        <h2 className="mt-4 text-3xl font-semibold md:text-4xl">{title}</h2>
-        <p className="mt-4 text-base text-muted leading-relaxed md:text-lg">
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-60px" }}
+        className="mx-auto max-w-3xl text-center"
+      >
+        <motion.div variants={staggerItem}>
+          <Badge>{badge}</Badge>
+        </motion.div>
+        <motion.h2
+          variants={staggerItem}
+          className="mt-4 text-3xl font-semibold md:text-4xl"
+        >
+          {title}
+        </motion.h2>
+        <motion.p
+          variants={staggerItem}
+          className="mt-4 text-base text-muted leading-relaxed md:text-lg"
+        >
           {description}
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
 
-      <div className="mt-12 md:mt-14">
+      <Reveal className="mt-12 md:mt-14" delay={0.15}>
         <div
           className="flex h-[420px] gap-3 overflow-x-auto pb-2 snap-x snap-mandatory md:h-[460px] md:overflow-visible md:pb-0"
           onMouseLeave={() => setActive(0)}
@@ -175,10 +193,10 @@ export function ApproachSection({
                       </div>
 
                       <div className="relative mt-auto p-5 md:p-6">
-                        <h3 className="font-display text-2xl text-[#fff6f6] md:text-3xl">
+                        <h3 className="font-display text-2xl text-white md:text-3xl">
                           {step.title}
                         </h3>
-                        <p className="mt-2 max-w-lg text-sm leading-relaxed text-[#fff6f6]/75 md:text-base">
+                        <p className="mt-2 max-w-lg text-sm leading-relaxed text-white/70 md:text-base">
                           {step.description}
                         </p>
                         <span
@@ -216,7 +234,7 @@ export function ApproachSection({
             );
           })}
         </div>
-      </div>
+      </Reveal>
     </SectionWrapper>
   );
 }

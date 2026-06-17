@@ -7,6 +7,18 @@ export const homepageContent = {
       "Eliminating physical hallucinations through deterministic, physics-grounded autonomy.",
     backgroundVideo: "/0615.mp4",
   },
+  marquee: [
+    "Synthetic Data",
+    "Simulation",
+    "Robotics",
+    "Perception",
+    "Edge Deploy",
+    "Machine Tending",
+    "Autonomy",
+    "Physical AI",
+    "Model Training",
+    "Industrial Automation",
+  ],
   approach: {
     badge: "Our Approach",
     title: "Unified Platform for Physical AI",
@@ -52,8 +64,6 @@ export const homepageContent = {
         description:
           "Generate thousands of training scenarios from minimal real-world telemetry.",
         href: "/products/forge",
-        tryHref: FORGE_URL,
-        layer: "Synthetic data",
         bento: "featured",
       },
       {
@@ -62,7 +72,6 @@ export const homepageContent = {
         description:
           "Develop, retrain, and optimize perception and action models for industrial environments.",
         href: "/products/sentinel",
-        layer: "Model training",
         bento: "standard",
       },
       {
@@ -70,7 +79,6 @@ export const homepageContent = {
         tagline: "Heterogeneous Edge Orchestration",
         description: "Deploy seamlessly across CPUs, GPUs, and NPUs.",
         href: "/products/runtime",
-        layer: "Edge deployment",
         bento: "standard",
       },
       {
@@ -79,7 +87,6 @@ export const homepageContent = {
         description:
           "Global monitoring synchronized with local robot execution — two intelligence layers, one coordinated stack.",
         href: "/products/dual-view-intelligence",
-        layer: "Supervisory control",
         bento: "wide",
       },
     ],

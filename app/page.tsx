@@ -1,11 +1,12 @@
 import { homepageContent } from "@/lib/content/homepage";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { DomainMarquee } from "@/components/sections/DomainMarquee";
 import { ApproachSection } from "@/components/sections/ApproachSection";
 import { PlatformCards } from "@/components/sections/PlatformCards";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export default function HomePage() {
-  const { hero, approach, platform, finalCta } = homepageContent;
+  const { hero, marquee, approach, platform, finalCta } = homepageContent;
 
   return (
     <>
@@ -15,6 +16,7 @@ export default function HomePage() {
         backgroundVideo={hero.backgroundVideo}
         centered
       />
+      <DomainMarquee terms={marquee} />
       <ApproachSection
         badge={approach.badge}
         title={approach.title}

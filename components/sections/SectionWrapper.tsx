@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { defaultTransition } from "@/lib/motion";
 
 type SectionTone = "default" | "light" | "alt";
 
@@ -10,6 +11,7 @@ type SectionWrapperProps = {
   className?: string;
   id?: string;
   tone?: SectionTone;
+  animate?: boolean;
 };
 
 const toneClasses: Record<SectionTone, string> = {
@@ -23,14 +25,15 @@ export function SectionWrapper({
   className,
   id,
   tone = "default",
+  animate = true,
 }: SectionWrapperProps) {
   return (
     <motion.section
       id={id}
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={animate ? { opacity: 0, y: 32 } : false}
+      whileInView={animate ? { opacity: 1, y: 0 } : undefined}
       viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.5 }}
+      transition={{ ...defaultTransition, duration: 0.65 }}
       className={cn("py-24 md:py-32", toneClasses[tone], className)}
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">{children}</div>
