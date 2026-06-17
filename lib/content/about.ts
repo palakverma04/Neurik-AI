@@ -3,45 +3,28 @@ export const aboutContent = {
     badge: "About Us",
     title: "Building the Nervous System for Physical AI",
     description:
-      "NEURIK is on a mission to eliminate physical hallucinations through deterministic, physics-grounded autonomy.",
+      "NEURIK helps teams bridge simulation and real-world deployment for autonomous systems.",
   },
-  mission: {
-    title: "Our Mission",
+  overview: {
+    title: "What we do",
     description:
-      "Eliminating physical hallucinations through deterministic, physics-grounded autonomy. We help organizations bridge the gap between simulation and real-world execution for autonomous systems.",
-  },
-  whatWeBuild: {
-    title: "What We Build",
-    description:
-      "Our platform combines synthetic data generation, domain-specific model development, and heterogeneous edge orchestration into a unified software nervous system for Physical AI. From industrial robotics to autonomous inspection systems, we enable machines to see, reason, and act reliably in dynamic real-world environments.",
+      "Our platform combines synthetic data generation, domain-specific model development, and heterogeneous edge orchestration into one stack for Physical AI. We focus on deterministic, physics-grounded autonomy so machines can see, reason, and act reliably in dynamic environments.",
   },
   values: [
     {
-      title: "Physics-Grounded",
+      title: "Physics-grounded",
       description:
-        "We build on deterministic, physics-accurate foundations rather than brittle approximations.",
+        "Deterministic, physics-accurate foundations instead of brittle approximations.",
     },
     {
-      title: "Continuous Adaptation",
+      title: "Continuous adaptation",
       description:
-        "Systems should learn and improve from real-world feedback, not require weeks of manual retraining.",
+        "Systems that improve from real-world feedback without weeks of manual retraining.",
     },
     {
-      title: "Edge-First",
+      title: "Edge-first",
       description:
-        "Intelligence must run reliably across heterogeneous hardware at the point of action.",
+        "Intelligence that runs reliably across heterogeneous hardware at the point of action.",
     },
   ],
-  team: {
-    title: "Our Team",
-    description:
-      "We're assembling a team of engineers, researchers, and operators passionate about making Physical AI work in the real world. Team profiles coming soon.",
-    placeholder: true,
-  },
-  contact: {
-    title: "Get in Touch",
-    description:
-      "Interested in partnering with NEURIK or learning more about our platform?",
-    email: "hello@neurik.ai",
-  },
 } as const;
