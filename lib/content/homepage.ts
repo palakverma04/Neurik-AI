@@ -3,7 +3,7 @@ export const homepageContent = {
     title: "The Nervous System for Physical AI",
     subtitle:
       "Eliminating physical hallucinations through deterministic, physics-grounded autonomy.",
-    backgroundVideo: "/0615.mp4",
+    backgroundVideo: "/platform/hero.mp4",
   },
   marquee: [
     "Synthetic Data",
@@ -28,14 +28,14 @@ export const homepageContent = {
         description: "Create physics-accurate synthetic environments.",
         href: "/products/forge",
         role: "featured",
-        media: { type: "video", src: "/Generate.mp4", alt: "Synthetic simulation" },
+        media: { type: "video", src: "/platform/generate.mp4", alt: "Synthetic simulation" },
       },
       {
         title: "Train",
         description: "Train segmentation and action models.",
         href: "/products/sentinel",
         role: "card",
-        media: { type: "video", src: "/training_progress.mp4", alt: "Model training" },
+        media: { type: "video", src: "/platform/training-progress.mp4", alt: "Model training" },
       },
       {
         title: "Deploy",
@@ -43,7 +43,7 @@ export const homepageContent = {
           "Accelerate training and inference across GPUs, TPUs, ASICs, CPUs, and NPUs.",
         href: "/products/runtime",
         role: "card",
-        media: { type: "video", src: "/platform/runtime.mp4", alt: "Edge deployment" },
+        media: { type: "image", src: "/platform/dual-view.png", alt: "Edge deployment" },
       },
     ],
   },

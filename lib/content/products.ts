@@ -54,7 +54,7 @@ export const products: Record<string, Product> = {
     name: "Forge",
     tagline: "Physics-Infused Synthetic Data Generation",
     tryHref: FORGE_URL,
-    showcaseVideo: "/Fabric-Neurik.mp4",
+    showcaseVideo: "/platform/forge.mp4",
     description:
       "Forge uses physics-grounded simulation to create realistic training environments and edge-case scenarios without requiring extensive manual data collection.",
     extendedDescription:
@@ -91,7 +91,10 @@ export const products: Record<string, Product> = {
     slug: "sentinel",
     name: "Sentinel",
     tagline: "Domain-Specific Intelligence for Physical AI",
-    showcaseVideo: [ "/val_seg_loss_progress.mp4","/training_progress.mp4"],
+    showcaseVideo: [
+      "/platform/training-progress.mp4",
+      "/platform/val-seg-loss-progress.mp4",
+    ],
     description:
       "Sentinel develops and retrains specialized models optimized for real-world industrial environments.",
     valueProposition: {
