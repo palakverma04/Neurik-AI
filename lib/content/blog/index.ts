@@ -27,7 +27,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-06-11",
     author: "NEURIK Team",
     category: "Product",
-    file: "forge-blog-v1.md",
+    file: "forge-blog-v1/post.md",
     coverImage:
       "https://lh3.googleusercontent.com/d/17_C1czHmEwOvcn3GSXjqArqg1q3vaU6w=w2000",
   },

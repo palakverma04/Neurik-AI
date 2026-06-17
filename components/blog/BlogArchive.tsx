@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import type { BlogPost } from "@/lib/content/blog/types";
+import type { BlogPost } from "@/lib/content/blog";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Search } from "lucide-react";
 

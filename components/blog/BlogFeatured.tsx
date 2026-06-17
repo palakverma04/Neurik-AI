@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { BlogPost } from "@/lib/content/blog/types";
+import type { BlogPost } from "@/lib/content/blog";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
 
