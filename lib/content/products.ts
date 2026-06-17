@@ -43,6 +43,7 @@ export type Product = {
   };
   relatedProducts?: string[];
   tryHref?: string;
+  showcaseVideo?: string;
 };
 
 import { FORGE_URL } from "./product-urls";
@@ -53,6 +54,7 @@ export const products: Record<string, Product> = {
     name: "Forge",
     tagline: "Physics-Infused Synthetic Data Generation",
     tryHref: FORGE_URL,
+    showcaseVideo: "/Fabric-Neurik.mp4",
     description:
       "Forge uses physics-grounded simulation to create realistic training environments and edge-case scenarios without requiring extensive manual data collection.",
     extendedDescription:

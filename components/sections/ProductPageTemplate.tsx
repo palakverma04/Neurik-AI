@@ -5,6 +5,7 @@ import { OutcomesGrid } from "./OutcomesGrid";
 import { FeatureSections } from "./FeatureSections";
 import { DualViewSplit } from "./DualViewSplit";
 import { WorkflowSteps } from "./WorkflowSteps";
+import { ProductShowcaseVideo } from "./ProductShowcaseVideo";
 import { RelatedProducts } from "./RelatedProducts";
 import { FinalCTA } from "./FinalCTA";
 import { SectionWrapper } from "./SectionWrapper";
@@ -32,6 +33,10 @@ export function ProductPageTemplate({ product }: ProductPageTemplateProps) {
         ]}
         compact
       />
+
+      {product.showcaseVideo && (
+        <ProductShowcaseVideo src={product.showcaseVideo} />
+      )}
 
       {product.valueProposition && (
         <ValuePropositionSection valueProposition={product.valueProposition} />
