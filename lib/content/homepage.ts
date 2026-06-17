@@ -45,13 +45,6 @@ export const homepageContent = {
         role: "card",
         media: { type: "video", src: "/platform/runtime.mp4", alt: "Edge deployment" },
       },
-      {
-        title: "Adopt",
-        description: "Improved QAFT, Kernel Coding Agent",
-        href: "/products/dual-view-intelligence",
-        role: "featured-bottom",
-        media: { type: "image", src: "/platform/dual-view.png", alt: "Live adaptation" },
-      },
     ],
   },
   platform: {
@@ -82,14 +75,6 @@ export const homepageContent = {
         description: "Deploy seamlessly across CPUs, GPUs, and NPUs.",
         href: "/products/runtime",
         bento: "standard",
-      },
-      {
-        name: "Dual-View Intelligence",
-        tagline: "Supervisory awareness combined with real-time robotic execution.",
-        description:
-          "Global monitoring synchronized with local robot execution — two intelligence layers, one coordinated stack.",
-        href: "/products/dual-view-intelligence",
-        bento: "wide",
       },
     ],
   },

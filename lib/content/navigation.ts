@@ -19,12 +19,6 @@ export const products = [
     description: "Heterogeneous Edge Orchestration",
     href: "/products/runtime",
   },
-  {
-    slug: "dual-view-intelligence",
-    name: "Dual-View Intelligence",
-    description: "Supervisory + Robot execution layers",
-    href: "/products/dual-view-intelligence",
-  },
 ] as const;
 
 export const industries = [

@@ -21,11 +21,6 @@ export const technologyContent = {
       description: "Heterogeneous Edge Orchestration",
       href: "/products/runtime",
     },
-    {
-      name: "Dual-View Intelligence",
-      description: "Supervisory + Robot execution layers",
-      href: "/products/dual-view-intelligence",
-    },
   ],
   hardware: {
     title: "Supported Hardware",

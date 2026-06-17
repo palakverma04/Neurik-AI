@@ -141,7 +141,7 @@ export const industries: Record<string, Industry> = {
           "Export annotated images and simulation data that can be used for VLAs and robots.",
       },
     ],
-    relatedProducts: ["sentinel", "runtime", "dual-view-intelligence"],
+    relatedProducts: ["sentinel", "runtime"],
   },
 };
 

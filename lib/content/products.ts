@@ -159,7 +159,7 @@ export const products: Record<string, Product> = {
       "Fleet Deployment",
       "Monitoring and Telemetry",
     ],
-    relatedProducts: ["dual-view-intelligence", "sentinel"],
+    relatedProducts: ["sentinel"],
   },
   "dual-view-intelligence": {
     slug: "dual-view-intelligence",
