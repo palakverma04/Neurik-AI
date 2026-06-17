@@ -145,6 +145,17 @@ h6 {
   background-size: 64px 64px;
 }
 
+.grid-bg-surface {
+  background-image:
+    linear-gradient(rgb(var(--brand-black-rgb) / 0.05) 1px, transparent 1px),
+    linear-gradient(
+      90deg,
+      rgb(var(--brand-black-rgb) / 0.05) 1px,
+      transparent 1px
+    );
+  background-size: 72px 72px;
+}
+
 .section-band-default {
   background: var(--section-bg);
 }

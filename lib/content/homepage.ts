@@ -28,14 +28,14 @@ export const homepageContent = {
         description: "Create physics-accurate synthetic environments.",
         href: "/products/forge",
         role: "featured",
-        media: { type: "video", src: "/platform/forge.mp4", alt: "Synthetic simulation" },
+        media: { type: "video", src: "/Generate.mp4", alt: "Synthetic simulation" },
       },
       {
         title: "Train",
         description: "Train segmentation and action models.",
         href: "/products/sentinel",
         role: "card",
-        media: { type: "image", src: "/platform/sentinel.png", alt: "Model training" },
+        media: { type: "video", src: "/training_progress.mp4", alt: "Model training" },
       },
       {
         title: "Deploy",

@@ -43,7 +43,7 @@ export type Product = {
   };
   relatedProducts?: string[];
   tryHref?: string;
-  showcaseVideo?: string;
+  showcaseVideo?: string | readonly string[];
 };
 
 import { FORGE_URL } from "./product-urls";
@@ -91,6 +91,7 @@ export const products: Record<string, Product> = {
     slug: "sentinel",
     name: "Sentinel",
     tagline: "Domain-Specific Intelligence for Physical AI",
+    showcaseVideo: [ "/val_seg_loss_progress.mp4","/training_progress.mp4"],
     description:
       "Sentinel develops and retrains specialized models optimized for real-world industrial environments.",
     valueProposition: {
