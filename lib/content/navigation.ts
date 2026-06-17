@@ -14,10 +14,10 @@ export const products = [
     href: "/products/sentinel",
   },
   {
-    slug: "runtime",
-    name: "Runtime",
+    slug: "axion",
+    name: "Axion",
     description: "Heterogeneous Edge Orchestration",
-    href: "/products/runtime",
+    href: "/products/axion",
   },
 ] as const;
 
@@ -26,7 +26,7 @@ export const industries = [
     slug: "fashion",
     name: "Fashion",
     description:
-      "Physically accurate synthetic data for fashion inspection and handling workflows.",
+      "Poly-bagged apparel in fulfillment boxes with layout and SKU variation.",
     href: "/industries/fashion",
   },
   {
@@ -40,7 +40,7 @@ export const industries = [
     slug: "electronics",
     name: "Electronics",
     description:
-      "CAD-to-data synthetic scenes for electronics inspection and defect coverage.",
+      "Dark-field machined components with CAD-accurate geometry and batch grids.",
     href: "/industries/electronics",
   },
   {

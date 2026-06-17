@@ -56,7 +56,7 @@ export const technologyContent = {
       ],
       impact:
         "Enable systems to move beyond perception and develop the ability to reason, plan, and act within the physical world.",
-      href: "/products/runtime",
+      href: "/products/axion",
     },
     {
       name: "Quantization-Aware Fine-Tuning (QAFT)",

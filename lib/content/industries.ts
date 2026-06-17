@@ -30,66 +30,100 @@ export const industries: Record<string, Industry> = {
     slug: "fashion",
     name: "Fashion",
     description:
-      "Input text descriptions of depth, height, width, wrinkles intensity, and other physical properties. Neurik AI uses PINNs and generative AI to create physically accurate synthetic data with corner cases for fashion inspection and handling workflows.",
+      "Generate top-down fulfillment box scenes for apparel and accessories — poly-bagged garments in varied layouts, materials, and SKU configurations for inspection and handling models.",
     pills: [
-      "Wrinkles intensity",
-      "Dimensions",
-      "COCO annotations",
-      "Lighting variation",
+      "Poly-bagged apparel",
+      "Box layouts",
+      "Material variation",
+      "RGB renders",
     ],
+    showcase: {
+      title: "Fulfillment box inspection scenes",
+      description:
+        "Simulate how fashion inventory actually ships — folded garments and bagged accessories in cardboard boxes, wrapped in clear poly with wrinkles and reflections. Vary product type and packing layout from jumbled stacks to organized grids.",
+      images: [
+        {
+          src: "/platform/fashion1.png",
+          alt: "Top-down view of camouflage trousers in clear poly bags, jumbled in a cardboard shipping box on a warehouse floor",
+          label: "RGB · jumbled poly-bagged trousers",
+        },
+        {
+          src: "/platform/fashion2.png",
+          alt: "Top-down view of monogram denim handbags in clear poly bags, arranged in a 2×2 grid inside a cardboard box",
+          label: "RGB · organized handbag grid layout",
+        },
+      ],
+    },
     details: [
       {
-        title: "Controlled generation",
+        title: "Mixed packing layouts",
         description:
-          "Generate variations across garment dimensions, folds, wrinkles, layout, lighting, shadows, and reflections.",
+          "Generate jumbled folded stacks or organized grid arrangements inside the same cardboard box — matching real fulfillment and returns handling.",
       },
       {
-        title: "Robot-ready data",
+        title: "Poly-bag optics",
         description:
-          "Create physically accurate 3D assets and simulate them in Isaac Sim for training VLAs and robots.",
+          "Clear plastic wrapping with wrinkles, folds, and specular highlights — the surface conditions that make apparel vision hard in production.",
       },
       {
-        title: "Camera geometry",
+        title: "Product variation",
         description:
-          "Provide camera intrinsics and extrinsics to render accurate images from specified perspectives.",
+          "Switch apparel types, patterns, and SKUs — from folded trousers to bagged handbags — without rebuilding the box or camera rig.",
       },
       {
-        title: "Training labels",
+        title: "Training-ready labels",
         description:
-          "Export depth, segmentation, bounding boxes, and preferential annotations in COCO format.",
+          "Export segmentation, depth, bounding boxes, and COCO-format annotations for pick, count, and inspect workflows.",
       },
     ],
-    relatedProducts: ["forge", "sentinel"],
+    relatedProducts: ["forge", "sentinel", "axion"],
   },
   electronics: {
     slug: "electronics",
     name: "Electronics",
     description:
-      "Start from CAD models of parts or precise dimensional descriptions. Generate physically accurate synthetic data of electronics parts under different lighting, reflections, and defect conditions.",
-    pills: ["CAD input", "Part dimensions", "Defects", "Reflections"],
+      "Generate top-down dark-field inspection scenes of precision machined metal components — CAD-accurate geometry, brushed surfaces, and controlled specular lighting.",
+    pills: [
+      "CAD input",
+      "Brushed metal",
+      "Batch grids",
+      "Dark-field RGB",
+    ],
+    showcase: {
+      title: "Dark-field part inspection",
+      description:
+        "Top-down renders of identical machined lever components on a black background — brushed aluminum grain, circular pivot mounts, paired mounting holes, and hard directional lighting with deep shadow separation between parts.",
+      images: [
+        {
+          src: "/platform/electronics1.png",
+          alt: "Top-down dark-field view of brushed aluminum lever components with circular mounts and paired holes, arranged in a repeating inspection grid",
+          label: "RGB · machined lever batch grid",
+        },
+      ],
+    },
     details: [
       {
-        title: "CAD-to-data",
+        title: "CAD-to-scene",
         description:
-          "Use CAD models or accurate part descriptions as input to create controlled synthetic scenes.",
+          "Import CAD geometry or dimensional specs — hole placement, rounded ends, and pivot mounts rendered with physically accurate proportions.",
       },
       {
-        title: "Defect coverage",
+        title: "Brushed metal optics",
         description:
-          "Generate variations such as dents, defects, surface changes, and part-level corner cases.",
+          "Directional lighting across brushed aluminum surfaces with specular highlights and shadow falloff on a true black inspection field.",
       },
       {
-        title: "Inspection conditions",
+        title: "Batch grid layouts",
         description:
-          "Render under different lighting setups, reflections, camera poses, and industrial viewing angles.",
+          "Repeat identical components in controlled vertical grids with consistent spacing for high-throughput inspection training.",
       },
       {
-        title: "Annotations",
+        title: "Defect injection",
         description:
-          "Export depth maps, segmentation masks, bounding boxes, and COCO-compatible labels.",
+          "Add dents, surface scratches, and part-level corner cases while keeping the same camera angle and lighting rig.",
       },
     ],
-    relatedProducts: ["forge", "sentinel"],
+    relatedProducts: ["forge", "sentinel", "axion"],
   },
   food: {
     slug: "food",
@@ -151,7 +185,7 @@ export const industries: Record<string, Industry> = {
           "Generate depth maps from the same scene to train pick-point estimation, height reasoning, and occlusion handling on flexible pillow-pack geometry.",
       },
     ],
-    relatedProducts: ["forge", "sentinel", "runtime"],
+    relatedProducts: ["forge", "sentinel", "axion"],
   },
   "machine-tending": {
     slug: "machine-tending",
@@ -208,7 +242,7 @@ export const industries: Record<string, Industry> = {
           "Produce RGB, depth, segmentation, bounding boxes, and COCO-format annotations ready for VLA training and robot deployment.",
       },
     ],
-    relatedProducts: ["forge", "sentinel", "runtime"],
+    relatedProducts: ["forge", "sentinel", "axion"],
   },
 };
 

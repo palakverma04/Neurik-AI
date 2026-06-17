@@ -41,7 +41,7 @@ export const homepageContent = {
         title: "Deploy",
         description:
           "Accelerate training and inference across GPUs, TPUs, ASICs, CPUs, and NPUs.",
-        href: "/products/runtime",
+        href: "/products/axion",
         role: "card",
         media: { type: "image", src: "/platform/dual-view.png", alt: "Edge deployment" },
       },
@@ -68,10 +68,10 @@ export const homepageContent = {
         href: "/products/sentinel",
       },
       {
-        name: "Runtime",
+        name: "Axion",
         tagline: "Heterogeneous Edge Orchestration",
         description: "Deploy seamlessly across CPUs, GPUs, and NPUs.",
-        href: "/products/runtime",
+        href: "/products/axion",
       },
     ],
   },

@@ -90,7 +90,7 @@ export const products: Record<string, Product> = {
           "Forge extends beyond visual perception. By incorporating physics-grounded interaction modeling, autonomous systems can learn not only how environments appear, but how they behave during physical interaction.",
       },
     ],
-    relatedProducts: ["sentinel", "runtime"],
+    relatedProducts: ["sentinel", "axion"],
   },
   sentinel: {
     slug: "sentinel",
@@ -184,15 +184,15 @@ export const products: Record<string, Product> = {
         ],
       },
     ],
-    relatedProducts: ["forge", "runtime", "dual-view-intelligence"],
+    relatedProducts: ["forge", "axion", "dual-view-intelligence"],
   },
-  runtime: {
-    slug: "runtime",
-    name: "Runtime",
-    tagline: "Heterogeneous Edge Runtime",
+  axion: {
+    slug: "axion",
+    name: "Axion",
+    tagline: "Heterogeneous Edge Orchestration",
     subtitle: "Unified Deployment Across Any Hardware Environment",
     description:
-      "The Runtime coordinates workloads across heterogeneous compute architectures without requiring specialized rewrites.",
+      "Axion coordinates workloads across heterogeneous compute architectures without requiring specialized rewrites.",
     supportedPlatforms: ["CPU", "GPU", "NPU"],
     capabilities: [
       "Real-Time Inference",
@@ -209,7 +209,7 @@ export const products: Record<string, Product> = {
     name: "Dual-View Intelligence",
     tagline: "Global Awareness. Local Action.",
     description:
-      "Our runtime operates through two synchronized intelligence layers.",
+      "Axion operates through two synchronized intelligence layers.",
     views: [
       {
         title: "Supervisory View",
@@ -228,7 +228,7 @@ export const products: Record<string, Product> = {
           "Supervisory View provides continuous global awareness across the full robotic system.",
       },
     ],
-    relatedProducts: ["runtime", "sentinel"],
+    relatedProducts: ["axion", "sentinel"],
   },
 };
 
