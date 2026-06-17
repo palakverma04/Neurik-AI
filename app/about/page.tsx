@@ -3,7 +3,6 @@ import { aboutContent } from "@/lib/content/about";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { SectionWrapper } from "@/components/sections/SectionWrapper";
 import { FinalCTA } from "@/components/sections/FinalCTA";
-import { getStartedCta } from "@/lib/content/navigation";
 import { Mail, Users } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -24,33 +23,33 @@ export default function AboutPage() {
         compact
       />
 
-      <SectionWrapper tone="alt">
-        <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
+      <SectionWrapper tone="surface">
+        <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
           {mission.title}
         </h2>
-        <p className="mt-4 text-lg text-muted leading-relaxed max-w-3xl">
+        <p className="mt-4 max-w-3xl text-lg leading-relaxed text-muted">
           {mission.description}
         </p>
       </SectionWrapper>
 
       <SectionWrapper>
-        <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
+        <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
           {whatWeBuild.title}
         </h2>
-        <p className="mt-4 text-lg text-muted leading-relaxed max-w-3xl">
+        <p className="mt-4 max-w-3xl text-lg leading-relaxed text-muted">
           {whatWeBuild.description}
         </p>
       </SectionWrapper>
 
-      <SectionWrapper>
-        <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-8 text-center">
+      <SectionWrapper tone="surface">
+        <h2 className="mb-8 text-center text-2xl font-bold tracking-tight md:text-3xl">
           Our Values
         </h2>
         <div className="grid gap-6 md:grid-cols-3">
           {values.map((value) => (
-            <div key={value.title} className="glass-card rounded-xl p-6">
-              <h3 className="text-lg font-semibold text-accent">{value.title}</h3>
-              <p className="mt-3 text-sm text-muted leading-relaxed">
+            <div key={value.title} className="surface-panel rounded-xl p-6">
+              <h3 className="text-lg font-semibold">{value.title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted">
                 {value.description}
               </p>
             </div>
@@ -59,18 +58,18 @@ export default function AboutPage() {
       </SectionWrapper>
 
       <SectionWrapper>
-        <div className="text-center max-w-2xl mx-auto">
-          <Users className="h-12 w-12 text-accent mx-auto mb-4" />
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
+        <div className="mx-auto max-w-2xl text-center">
+          <Users className="mx-auto mb-4 h-12 w-12 text-muted" />
+          <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
             {team.title}
           </h2>
-          <p className="mt-4 text-muted leading-relaxed">{team.description}</p>
+          <p className="mt-4 leading-relaxed text-muted">{team.description}</p>
           {team.placeholder && (
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
               {[1, 2, 3].map((i) => (
                 <div
                   key={i}
-                  className="glass-card rounded-xl p-6 h-32 flex items-center justify-center"
+                  className="glass-card flex h-32 items-center justify-center rounded-xl p-6"
                 >
                   <span className="text-sm text-muted">Coming soon</span>
                 </div>
@@ -80,27 +79,21 @@ export default function AboutPage() {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper>
-        <div className="glass-card rounded-2xl p-8 md:p-12 text-center max-w-2xl mx-auto">
-          <Mail className="h-10 w-10 text-accent mx-auto mb-4" />
+      <SectionWrapper tone="surface">
+        <div className="surface-panel mx-auto max-w-2xl rounded-2xl p-8 text-center md:p-12">
+          <Mail className="mx-auto mb-4 h-10 w-10 text-muted" />
           <h2 className="text-2xl font-bold">{contact.title}</h2>
           <p className="mt-3 text-muted">{contact.description}</p>
           <a
             href={`mailto:${contact.email}`}
-            className="mt-4 inline-block text-accent hover:underline"
+            className="mt-4 inline-block font-medium hover:underline"
           >
             {contact.email}
           </a>
         </div>
       </SectionWrapper>
 
-      <FinalCTA
-        title="Partner with NEURIK"
-        description="Let's build autonomous systems that operate reliably in the real world."
-        ctas={[
-          { label: getStartedCta.label, href: getStartedCta.href, variant: "default" },
-        ]}
-      />
+      <FinalCTA />
     </>
   );
 }

@@ -11,38 +11,36 @@ export function ValuePropositionSection({
   const metric = valueProposition.metric ?? "F1 score";
 
   return (
-    <SectionWrapper tone="default" className="py-14 md:py-20">
+    <SectionWrapper tone="surface" className="py-14 md:py-20">
       <div className="max-w-3xl">
-          <h2 className="text-2xl leading-snug tracking-tight md:text-3xl">
-            {valueProposition.description}
-          </h2>
+        <h2 className="text-2xl leading-snug tracking-tight md:text-3xl">
+          {valueProposition.description}
+        </h2>
 
-          <div className="mt-10 flex flex-col items-start gap-8 sm:flex-row sm:gap-12">
-            <div>
-              <p className="font-mono text-4xl tabular-nums text-muted/55 md:text-5xl">
-                {valueProposition.from}
-              </p>
-              <p className="mt-2 text-xs uppercase tracking-[0.14em] text-muted">
-                Baseline {metric}
-              </p>
-            </div>
-
-            <div
-              className="hidden h-14 w-px shrink-0 bg-surface-border sm:block"
-              aria-hidden
-            />
-
-            <div>
-              <p className="font-mono text-4xl tabular-nums md:text-5xl">
-                {valueProposition.to}
-              </p>
-              <p className="mt-2 text-xs uppercase tracking-[0.14em] text-muted">
-                With Sentinel
-              </p>
-            </div>
+        <div className="mt-10 flex flex-col items-start gap-8 sm:flex-row sm:gap-12">
+          <div>
+            <p className="font-mono text-4xl tabular-nums text-muted md:text-5xl">
+              {valueProposition.from}
+            </p>
+            <p className="mt-2 text-xs uppercase tracking-[0.14em] text-muted">
+              Baseline {metric}
+            </p>
           </div>
 
-          <p className="mt-10 text-sm text-muted">{valueProposition.proof}</p>
+          <div
+            className="hidden h-px w-12 shrink-0 self-center bg-black/15 sm:block sm:h-16 sm:w-px"
+            aria-hidden
+          />
+
+          <div>
+            <p className="font-mono text-4xl tabular-nums md:text-5xl">
+              {valueProposition.to}
+            </p>
+            <p className="mt-2 text-xs uppercase tracking-[0.14em] text-muted">
+              With NEURIK {metric}
+            </p>
+          </div>
+        </div>
       </div>
     </SectionWrapper>
   );

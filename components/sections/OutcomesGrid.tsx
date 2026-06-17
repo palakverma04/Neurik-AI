@@ -8,7 +8,7 @@ type OutcomesGridProps = {
 export function OutcomesGrid({ title, items }: OutcomesGridProps) {
   return (
     <SectionWrapper className="py-16">
-      <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-8">
+      <h2 className="mb-8 text-2xl font-bold tracking-tight md:text-3xl">
         {title}
       </h2>
       <div className="grid gap-6 sm:grid-cols-2">
@@ -18,12 +18,9 @@ export function OutcomesGrid({ title, items }: OutcomesGridProps) {
           const label = match ? match[2] : item;
 
           return (
-            <div
-              key={item}
-              className="glass-card rounded-xl p-6 text-center"
-            >
+            <div key={item} className="glass-card rounded-xl p-6 text-center">
               {stat && (
-                <div className="text-3xl md:text-4xl font-semibold text-foreground mb-2">
+                <div className="mb-2 text-3xl font-semibold text-foreground md:text-4xl">
                   {stat}
                 </div>
               )}

@@ -6,7 +6,7 @@ import { PlatformCards } from "@/components/sections/PlatformCards";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export default function HomePage() {
-  const { hero, marquee, approach, platform, finalCta } = homepageContent;
+  const { hero, marquee, approach, platform } = homepageContent;
 
   return (
     <>
@@ -29,12 +29,7 @@ export default function HomePage() {
         description={platform.description}
         components={platform.components}
       />
-      <FinalCTA
-        title={finalCta.title}
-        description={finalCta.description}
-        ctas={finalCta.ctas}
-        tone="light"
-      />
+      <FinalCTA />
     </>
   );
 }

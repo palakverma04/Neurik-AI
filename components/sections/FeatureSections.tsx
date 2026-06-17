@@ -12,17 +12,17 @@ export function FeatureSections({ features }: FeatureSectionsProps) {
       {features.map((feature) => (
         <SectionWrapper key={feature.title}>
           <div className="max-w-3xl">
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
+            <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
               {feature.title}
             </h2>
-            <p className="mt-4 text-lg text-muted leading-relaxed">
+            <p className="mt-4 text-lg leading-relaxed text-muted">
               {feature.description}
             </p>
           </div>
 
           {feature.capabilities && feature.capabilities.length > 0 && (
             <div className="mt-8">
-              <h3 className="text-lg font-semibold mb-4">
+              <h3 className="mb-4 text-lg font-semibold">
                 {feature.capabilitiesLabel ?? "Capabilities"}
               </h3>
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -31,7 +31,7 @@ export function FeatureSections({ features }: FeatureSectionsProps) {
                     key={item}
                     className="flex items-start gap-3 rounded-lg border border-surface-border bg-foreground/[0.02] p-4"
                   >
-                    <CheckCircle2 className="h-5 w-5 shrink-0 text-accent mt-0.5" />
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
                     <span className="text-sm">{item}</span>
                   </div>
                 ))}
@@ -41,7 +41,7 @@ export function FeatureSections({ features }: FeatureSectionsProps) {
 
           {feature.benefits && feature.benefits.length > 0 && (
             <div className="mt-8">
-              <h3 className="text-lg font-semibold mb-4">
+              <h3 className="mb-4 text-lg font-semibold">
                 {feature.benefitsLabel ?? "Benefits"}
               </h3>
               <div className="grid gap-4 sm:grid-cols-2">

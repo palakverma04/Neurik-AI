@@ -19,6 +19,8 @@
   --accent-secondary: rgb(var(--brand-white-rgb) / 0.55);
   --section-bg: var(--brand-black);
   --section-bg-alt: var(--brand-elevated);
+  --brand-surface-light: #f4f4f2;
+  --brand-surface-light-rgb: 244 244 242;
   --brand-cta-card: #c8d0c2;
   --brand-cta-card-rgb: 200 208 194;
   --brand-cta-card-foreground: #2a2f27;
@@ -38,6 +40,7 @@
   --color-brand-black: var(--brand-black);
   --color-brand-white: var(--brand-white);
   --color-brand-cream: var(--brand-cream);
+  --color-brand-surface-light: var(--brand-surface-light);
   --font-sans: var(--font-plex), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-michroma), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-plex-mono), ui-monospace, monospace;
@@ -170,6 +173,38 @@ h6 {
 .section-band-light h5,
 .section-band-light h6 {
   color: var(--brand-black);
+}
+
+.section-band-surface {
+  --background: var(--brand-surface-light);
+  --foreground: var(--brand-black);
+  --muted: var(--brand-muted-light);
+  --surface: rgb(var(--brand-black-rgb) / 0.04);
+  --surface-border: rgb(var(--brand-black-rgb) / 0.1);
+  --accent: var(--brand-black);
+  --color-background: var(--brand-surface-light);
+  --color-foreground: var(--brand-black);
+  --color-muted: var(--brand-muted-light);
+  --color-surface: rgb(var(--brand-black-rgb) / 0.04);
+  --color-surface-border: rgb(var(--brand-black-rgb) / 0.1);
+  --color-accent: var(--brand-black);
+  background: var(--brand-surface-light);
+  color: var(--brand-black);
+}
+
+.section-band-surface h1,
+.section-band-surface h2,
+.section-band-surface h3,
+.section-band-surface h4,
+.section-band-surface h5,
+.section-band-surface h6 {
+  color: var(--brand-black);
+}
+
+.surface-panel {
+  background: var(--brand-white);
+  border: 1px solid rgb(var(--brand-black-rgb) / 0.08);
+  box-shadow: 0 16px 48px rgb(var(--brand-black-rgb) / 0.06);
 }
 
 .section-inset-dark {

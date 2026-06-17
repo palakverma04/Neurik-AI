@@ -31,8 +31,7 @@ type ApproachSectionProps = {
   steps: readonly Step[];
 };
 
-const surface = "bg-[#f4f4f2]";
-const card = "overflow-hidden rounded-2xl bg-white";
+const card = "surface-panel overflow-hidden rounded-2xl";
 
 function StepMedia({ step }: { step: Step }) {
   if (!step.media) {
@@ -171,10 +170,7 @@ export function ApproachSection({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ ...defaultTransition, duration: 0.65 }}
-      className={cn(
-        surface,
-        "py-20 text-brand-black [--foreground:var(--brand-black)] [--muted:var(--brand-muted-light)] md:py-28",
-      )}
+      className="section-band-surface py-20 md:py-28"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <motion.div
@@ -186,19 +182,19 @@ export function ApproachSection({
         >
           <motion.p
             variants={staggerItem}
-            className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--brand-muted-light)]"
+            className="font-mono text-xs uppercase tracking-[0.2em] text-muted"
           >
             {badge}
           </motion.p>
           <motion.h2
             variants={staggerItem}
-            className="mt-4 text-3xl font-semibold tracking-tight !text-brand-black md:text-4xl"
+            className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl"
           >
             {title}
           </motion.h2>
           <motion.p
             variants={staggerItem}
-            className="mt-4 text-base leading-relaxed text-[var(--brand-muted-light)] md:text-lg"
+            className="mt-4 text-base leading-relaxed text-muted md:text-lg"
           >
             {description}
           </motion.p>

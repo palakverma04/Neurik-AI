@@ -7,6 +7,7 @@ export const brand = {
   mutedLight: "#666666",
   /** @deprecated Use white */
   cream: "#FFFFFF",
+  surfaceLight: "#F4F4F2",
   ctaCard: "#C8D0C2",
   ctaCardForeground: "#2A2F27",
   ctaCardMuted: "#5C6556",

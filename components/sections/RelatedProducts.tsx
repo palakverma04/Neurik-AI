@@ -10,7 +10,7 @@ type RelatedProductsProps = {
 export function RelatedProducts({ slugs }: RelatedProductsProps) {
   return (
     <SectionWrapper className="py-16">
-      <h2 className="text-2xl font-bold mb-6">Related Products</h2>
+      <h2 className="mb-6 text-2xl font-bold">Related Products</h2>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {slugs.map((slug) => {
           const product = getProduct(slug);
@@ -19,15 +19,15 @@ export function RelatedProducts({ slugs }: RelatedProductsProps) {
             <Link
               key={slug}
               href={`/products/${slug}`}
-              className="glass-card group flex items-center justify-between rounded-xl p-5 hover:glow-border transition-all"
+              className="glass-card group flex items-center justify-between rounded-xl p-5 transition-all hover:glow-border"
             >
               <div>
-                <h3 className="font-semibold group-hover:text-accent transition-colors">
+                <h3 className="font-semibold transition-colors group-hover:text-accent">
                   {product.name}
                 </h3>
-                <p className="text-sm text-muted mt-1">{product.tagline}</p>
+                <p className="mt-1 text-sm text-muted">{product.tagline}</p>
               </div>
-              <ArrowRight className="h-4 w-4 text-accent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <ArrowRight className="h-4 w-4 text-accent opacity-0 transition-opacity group-hover:opacity-100" />
             </Link>
           );
         })}

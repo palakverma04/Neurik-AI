@@ -110,13 +110,7 @@ export function ProductPageTemplate({ product }: ProductPageTemplateProps) {
         <RelatedProducts slugs={product.relatedProducts} />
       )}
 
-      <FinalCTA
-        title="Build Autonomous Systems That Operate Reliably In The Real World"
-        description="From synthetic world generation to edge deployment and continuous adaptation, our platform provides the software nervous system required for Physical AI."
-        ctas={[
-          { label: getStartedCta.label, href: getStartedCta.href, variant: "default" },
-        ]}
-      />
+      <FinalCTA />
     </>
   );
 }

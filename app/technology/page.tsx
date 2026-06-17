@@ -4,8 +4,6 @@ import { technologyContent } from "@/lib/content/technology";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { SectionWrapper } from "@/components/sections/SectionWrapper";
 import { FinalCTA } from "@/components/sections/FinalCTA";
-import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { getStartedCta } from "@/lib/content/navigation";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -26,40 +24,42 @@ export default function TechnologyPage() {
         compact
       />
 
-      <SectionWrapper>
-        <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-8 text-center">
+      <SectionWrapper tone="surface">
+        <h2 className="mb-8 text-center text-2xl font-bold tracking-tight md:text-3xl">
           Four Core Components
         </h2>
         <div className="grid gap-6 md:grid-cols-2">
           {components.map((component) => (
-            <Link key={component.name} href={component.href} className="group">
-              <Card className="h-full group-hover:glow-border">
-                <CardHeader>
-                  <CardTitle className="group-hover:text-accent transition-colors">
-                    {component.name}
-                  </CardTitle>
-                  <CardDescription>{component.description}</CardDescription>
-                  <span className="mt-2 inline-flex items-center gap-1 text-sm text-accent opacity-0 group-hover:opacity-100 transition-opacity">
-                    Explore <ArrowRight className="h-4 w-4" />
-                  </span>
-                </CardHeader>
-              </Card>
+            <Link
+              key={component.name}
+              href={component.href}
+              className="surface-panel group block rounded-2xl p-6 transition-[box-shadow,transform] duration-300 hover:-translate-y-1 hover:shadow-[0_24px_64px_rgb(0_0_0/0.1)] md:p-8"
+            >
+              <h3 className="text-lg font-semibold tracking-tight transition-colors group-hover:text-black/70 md:text-xl">
+                {component.name}
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted md:text-base">
+                {component.description}
+              </p>
+              <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium opacity-0 transition-opacity group-hover:opacity-100">
+                Explore <ArrowRight className="h-4 w-4" />
+              </span>
             </Link>
           ))}
         </div>
       </SectionWrapper>
 
       <SectionWrapper>
-        <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
             {hardware.title}
           </h2>
-          <p className="mt-4 text-muted leading-relaxed">{hardware.description}</p>
+          <p className="mt-4 leading-relaxed text-muted">{hardware.description}</p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             {hardware.platforms.map((platform) => (
               <div
                 key={platform}
-                className="glass-card rounded-xl px-8 py-4 text-lg font-semibold text-accent"
+                className="glass-card rounded-xl px-8 py-4 text-lg font-semibold"
               >
                 {platform}
               </div>
@@ -68,13 +68,7 @@ export default function TechnologyPage() {
         </div>
       </SectionWrapper>
 
-      <FinalCTA
-        title="Explore the full NEURIK platform"
-        description="From synthetic world generation to edge deployment and continuous adaptation."
-        ctas={[
-          { label: getStartedCta.label, href: getStartedCta.href, variant: "default" },
-        ]}
-      />
+      <FinalCTA />
     </>
   );
 }

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { defaultTransition } from "@/lib/motion";
 
-type SectionTone = "default" | "light" | "alt";
+type SectionTone = "default" | "light" | "alt" | "surface";
 
 type SectionWrapperProps = {
   children: React.ReactNode;
@@ -18,6 +18,7 @@ const toneClasses: Record<SectionTone, string> = {
   default: "section-band-default",
   light: "section-band-light",
   alt: "section-band-alt",
+  surface: "section-band-surface",
 };
 
 export function SectionWrapper({
