@@ -73,7 +73,7 @@ export const products: Record<string, Product> = {
       "Automated Dataset Expansion",
     ],
     outcomes: [
-      "10x Reduction in Data Collection Costs",
+      "Reduction in Data Collection Costs",
       "Faster Model Iteration",
       "Improved Model Robustness",
       "Rapid Recovery from Edge Failures",

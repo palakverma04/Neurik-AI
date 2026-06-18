@@ -43,7 +43,7 @@ export const homepageContent = {
           "Accelerate training and inference across GPUs, TPUs, ASICs, CPUs, and NPUs.",
         href: "/products/axion",
         role: "card",
-        media: { type: "image", src: "/platform/dual-view.png", alt: "Edge deployment" },
+        media: { type: "image", src: "/platform/deploy.png", alt: "Edge deployment stack from models to GPU, TPU, and NPU" },
       },
     ],
   },
