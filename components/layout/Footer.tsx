@@ -7,13 +7,6 @@ import {
   legalLinks,
   getStartedCta,
 } from "@/lib/content/navigation";
-import { Globe, Share2, Mail } from "lucide-react";
-
-const socialLinks = [
-  { icon: Globe, href: "#", label: "Website" },
-  { icon: Share2, href: "#", label: "Social" },
-  { icon: Mail, href: "mailto:hello@neurik.ai", label: "Email" },
-];
 
 export function Footer() {
   return (
@@ -26,18 +19,6 @@ export function Footer() {
               The nervous system for Physical AI. Deterministic, physics-grounded
               autonomy for the real world.
             </p>
-            <div className="mt-6 flex gap-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="text-muted hover:text-accent transition-colors"
-                >
-                  <social.icon className="h-5 w-5" />
-                </a>
-              ))}
-            </div>
           </div>
 
           <div>

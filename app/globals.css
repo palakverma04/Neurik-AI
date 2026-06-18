@@ -41,7 +41,7 @@
   --color-brand-white: var(--brand-white);
   --color-brand-cream: var(--brand-cream);
   --color-brand-surface-light: var(--brand-surface-light);
-  --font-sans: var(--font-plex), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-google-sans), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-michroma), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-plex-mono), ui-monospace, monospace;
 }

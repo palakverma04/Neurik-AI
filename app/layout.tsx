@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Michroma, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import localFont from "next/font/local";
+import { Michroma, IBM_Plex_Mono } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { ScrollProgress } from "@/components/layout/ScrollProgress";
 import { IncubatorBanner } from "@/components/layout/IncubatorBanner";
@@ -13,10 +14,20 @@ const display = Michroma({
   display: "swap",
 });
 
-const body = IBM_Plex_Sans({
-  variable: "--font-plex",
-  subsets: ["latin"],
-  weight: ["400", "500"],
+const body = localFont({
+  src: [
+    {
+      path: "./fonts/GoogleSans-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/GoogleSans-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+  ],
+  variable: "--font-google-sans",
   display: "swap",
 });
 
