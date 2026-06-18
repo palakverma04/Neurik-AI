@@ -191,6 +191,7 @@ export const products: Record<string, Product> = {
     name: "Axion",
     tagline: "Heterogeneous Edge Orchestration",
     subtitle: "Unified Deployment Across Any Hardware Environment",
+    showcaseVideo: "/platform/deploy.mp4",
     description:
       "Axion coordinates workloads across heterogeneous compute architectures without requiring specialized rewrites.",
     supportedPlatforms: ["CPU", "GPU", "NPU"],
