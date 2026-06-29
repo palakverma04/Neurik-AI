@@ -170,7 +170,7 @@ export function ApproachSection({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ ...defaultTransition, duration: 0.65 }}
-      className="section-band-surface relative overflow-hidden py-20 md:py-28"
+      className="section-band-light relative overflow-hidden py-20 md:py-28"
     >
       <div className="pointer-events-none absolute inset-0 grid-bg-surface" />
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">

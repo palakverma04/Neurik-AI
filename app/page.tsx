@@ -1,6 +1,7 @@
 import { homepageContent } from "@/lib/content/homepage";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { DomainMarquee } from "@/components/sections/DomainMarquee";
+import { CustomersSection } from "@/components/sections/CustomersSection";
 import { ApproachSection } from "@/components/sections/ApproachSection";
 import { PlatformCards } from "@/components/sections/PlatformCards";
 import { FinalCTA } from "@/components/sections/FinalCTA";
@@ -29,6 +30,7 @@ export default function HomePage() {
         description={platform.description}
         components={platform.components}
       />
+      <CustomersSection />
       <FinalCTA />
     </>
   );
